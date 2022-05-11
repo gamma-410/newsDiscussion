@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://gamma-410.github.io/lip/lip/lip.css">
+    <title>newsDiscussion</title>
+</head>
+<body class="l-container l-bg-dark">
+    <div class="l-spacing-top"></div>
+    <br>
+        <h1 class="l-fontWeight-bold l-color-white">newsDiscussion</h1>
+        <p class="l-fontWeight-bold l-color-white">出来事について討論しよう</p>
+        <small class="l-color-white">by Google News</small>
+    <div class="l-spacing-top"></div>
+    <br>
+
+    {% for item in feed %}
+        <h4 class="l-hedding2-red l-fontWeight-medium l-color-white">{{ item.title }}</h4>
+        <hr>
+        <a href="{{ item.links[0].href }}"><button style="border:none;padding:10px;border-radius:5px;" class="l-bg-red l-fontWeight-medium l-color-dark">記事を読む</button></a>
+        <button style="border:none;padding:10px;border-radius:5px;" class="l-bg-blue l-fontWeight-medium l-color-dark">意見する (準備中)</button>
+        <br><br>
+    {% endfor %}
+
+    <small class="l-color-white">(c) copyright 2022 gamma</small>
+    <br><br>
+</body>
+</html>
