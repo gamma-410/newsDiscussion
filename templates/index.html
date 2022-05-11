@@ -19,7 +19,7 @@
         <h4 class="l-hedding2-red l-fontWeight-medium l-color-white">{{ item.title }}</h4>
         <p class="l-color-grey">{{ item.published }}</p>
         <hr>
-        <a href="{{ item.links[0].href }}"><button style="border:none;padding:10px;border-radius:5px;" class="l-bg-red l-fontWeight-medium l-color-dark">記事を読む</button></a>
+        <a href="{{ item.links[0].href }}" target="_blank" rel="noopener noreferrer"><button style="border:none;padding:10px;border-radius:5px;" class="l-bg-red l-fontWeight-medium l-color-dark">記事を読む</button></a>
         <button style="border:none;padding:10px;border-radius:5px;" class="l-bg-blue l-fontWeight-medium l-color-dark">意見する (準備中)</button>
         <br><br>
     {% endfor %}
