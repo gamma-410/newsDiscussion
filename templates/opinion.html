@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="l-fontWeight-bold l-color-white">opinions </h1>
+<p class="l-fontWeight-bold l-color-white">考えを共有する</p>
+<div class="l-spacing-top"></div>
+<br>
+<a href="/create"><button class="l-btn l-bg-blue">+ 新規作成</button></a>
+<br><br>
+
+{% for post in posts %}
+
+<div class="l-card l-bg-white l-color-dark l-border-radius">
+    <p>{{ post.post_date.date() }}</p>
+    <h4><b>{{ post.title }}</b></h4>
+    <hr class="l-bg-grey">
+    <small>writer: {{ post.user }}</small><br>
+    <a href="/detail/{{ post.id }}"><button class="l-btn l-bg-green">詳細</button></a>&nbsp;<a href="/delete/{{ post.id }}"><button class="l-btn l-bg-red">削除</button></a>
+</div>
+<br>
+{% endfor %}
+<br>
+<a href="/"><button class="l-btn l-bg-grey">戻る</button></a><br><br>
+{% endblock %}

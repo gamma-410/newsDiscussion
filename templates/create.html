@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="l-fontWeight-bold l-color-white">create a new card</h1>
+<p class="l-fontWeight-bold l-color-white">カードを作成</p>
+<div class="l-spacing-top"></div>
+
+<form action="/opinion" method="POST">
+    <p class="l-color-white l-fontWeight-medium">投稿日付 (押してください)</p>
+    <input class="l-input-blue l-fontWeight-medium" type="date" style="width:160px;" name="post_date">
+    <br>
+    <p class="l-color-white l-fontWeight-medium">投稿者名 (ニックネーム)</p>
+    <input class="l-input-blue l-fontWeight-medium" placeholder=" 投稿者名を入力してください" style="width:350px;" name="user">
+    <br>
+    <p class="l-color-white l-fontWeight-medium">意見カードのタイトル</p>
+    <input class="l-input-blue l-fontWeight-medium" placeholder=" 記事のタイトルを元に考えましょう" name="title">
+    <br>
+    <p class="l-color-white l-fontWeight-medium">意見文</p>
+    <textarea class="l-textarea-blue l-fontWeight-medium" rows="8" placeholder=" ニュース記事に対する意見を書きましょう" name="opinion"></textarea>
+    <br>
+    <a href="/opinion"><button type="button" class="l-btn l-bg-grey">戻る</button></a>&nbsp;<button type="submit" class="l-btn l-bg-blue">カードを投稿</button>
+</form>
+<br><br>
+
+{% endblock %}
