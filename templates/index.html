@@ -1,19 +1,22 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1 class="l-fontWeight-bold l-color-white">newsDiscussion</h1>
-<p class="l-fontWeight-bold l-color-white">出来事に意見しよう</p>
+<h1 class="l-fontWeight-bold" style="text-align:center;">newsDiscussion</h1>
+<p class="l-fontWeight-bold" style="text-align:center;">出来事に意見しよう</p>
 
 <div class="l-spacing-top"></div>
 <br>
-
+<hr>
+<br>
 {% for item in feed %}
-    <h4 class="l-hedding2-red l-fontWeight-medium l-color-white">{{ item.title }}</h4>
+<div style="border:1px solid #a9a9a9;" class="l-card l-bg-white l-color-dark l-border-radius">
+    <h4 class="l-hedding2-red l-fontWeight-medium">{{ item.title }}</h4>
     <p class="l-color-grey">{{ item.published }}</p>
     <hr>
-    <a href="{{ item.links[0].href }}" target="_blank" rel="noopener noreferrer"><button style="border:none;padding:10px;border-radius:5px;" class="l-bg-red l-fontWeight-medium l-color-dark">記事を読む</button></a>
-<a href="/opinion"><button style="border:none;padding:10px;border-radius:5px;" class="l-bg-blue l-fontWeight-medium l-color-dark">考えを共有</button></a>
-    <br><br>
+    <a href="{{ item.links[0].href }}" target="_blank" rel="noopener noreferrer"><button class="l-btn l-color-white l-bg-red">記事を読む</button></a>
+<a href="/opinion"><button class="l-btn l-color-white l-bg-blue">考えを共有</button></a>
+</div>
+<br>
 {% endfor %}
 
 {% endblock %}
