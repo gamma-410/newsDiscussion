@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://gamma-410.github.io/lip/lip/lip.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>newsDiscussion</title>
+    <style>
+        #top_btn{
+          width: 80px;
+          height: 80px;
+          position: fixed;
+          bottom: 50px;
+          right: 20px;
+          border: none;
+          border-radius: 50%;
+          padding: 6px 3px;
+        }
+    </style>
     {% block head %}{% endblock %}
 </head>
-<body class="l-container">
+<body class="l-container" style="background:;">
     <div class="l-spacing-top"></div>
     <br>
      {% block body %}{% endblock %}
     <br>
     <small>本サービスは Google News RSS を使用しています。</small><br>
-    <small>(c) copyright 2022 gamma</small>
+    <small><b>(c) copyright 2022 gamma</b></small>
     <br><br>
 </body>
 </html>
