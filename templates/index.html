@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1 class="l-fontWeight-bold">見つける</h1>
+<h1 style="letter-spacing:5px;line-height:40px;" class="l-hedding1-blue l-fontWeight-bold">見つける</h1>
 <div class="l-spacing-top"></div>
 <br>
 <hr>
 {% for item in feed %}
-<div class="l-card l-color-dark l-border-radius">
-    <h4 class="l-fontWeight-bold l-color-dark">{{ item.title }}</h4>
+<div style="padding:10px;padding-top:20px;padding-bottom:20px;" class="l-card l-color-dark l-border-radius">
+    <h4 style="letter-spacing:2px;line-height:30px;" class="l-fontWeight-bold l-color-dark">{{ item.title }}</h4>
     <small class="l-color-grey"># {{ item.published }}</small>
     <div style="margin-top:20px;"></div>
     <a href="{{ item.links[0].href }}" target="_blank" rel="noopener noreferrer">
@@ -15,6 +15,6 @@
     </a>
 </div>
 <hr>
-<a href="/opinion"><button id="top_btn" class="l-bg-red l-color-white"><i class="fa fa-comments-o fa-2x"></i></button></a>
+<a href="/opinion"><button id="top_btn" class="l-bg-blue l-color-white"><i class="fa fa-comments-o fa-2x"></i></button></a>
 {% endfor %}
 {% endblock %}

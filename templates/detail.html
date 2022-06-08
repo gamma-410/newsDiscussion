@@ -1,20 +1,37 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1 class="l-fontWeight-bold" style="text-align:center;">detail</h1>
-<p class="l-fontWeight-bold" style="text-align:center;"></p>
-<p class="l-fontWeight-bold" style="text-align:center;">writer: {{ post.user }}</p>
+<h2 style="letter-spacing:5px;line-height:40px;" class="l-fontWeight-bold">{{ post.title }}</h2>
+<p style="letter-spacing:2px;line-height:30px;" class="l-fontWeight-bold l-color-grey">@{{ post.user }} / {{ post.post_date.date() }}</p>
 <div class="l-spacing-top"></div>
-<br>
+<img id="img" style="border: solid #f3f3f3 2px;border-radius:20px 20px 0px 0px;width:100%;height:200px;object-fit: cover;">
+<hr>
+<div class="l-card l-color-dark l-border-radius">
+    <p style="letter-spacing:2px;line-height:30px;">{{ post.opinion }}</p>
+</div>
 <hr>
 <br>
-
-<div style="border:1px solid #a9a9a9;" class="l-card l-bg-white l-color-dark l-border-radius">
-    <p>{{ post.post_date.date() }}</p>
-    <h4 class="l-hedding2-red"><b>{{ post.title }}</b></h4>
-    <hr>
-    <p>{{ post.opinion }}</p>
-</div><br>
 <a href="/opinion"><button type="button" class="l-btn l-color-white l-bg-grey">戻る</button></a><br><br>
 
+<script type="text/javascript">
+   var imglist = new Array(
+      "../static/SVG/1.svg",
+      "../static/SVG/2.svg",
+      "../static/SVG/3.svg",
+      "../static/SVG/4.svg",
+      "../static/SVG/5.svg",
+      "../static/SVG/6.svg",
+      "../static/SVG/7.svg",
+      "../static/SVG/8.svg",
+      "../static/SVG/9.svg",
+      "../static/SVG/10.svg",
+      "../static/SVG/11.svg",
+      "../static/SVG/12.svg",
+      "../static/SVG/13.svg",
+      "../static/SVG/14.svg",
+      "../static/SVG/15.svg");
+   var selectnum = Math.floor(Math.random() * imglist.length);
+   img = document.getElementById("img")
+   img.src = imglist[selectnum]
+</script>
 {% endblock %}
